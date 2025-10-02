@@ -7,14 +7,11 @@ This repository uses `.editorconfig` to maintain consistent coding styles and se
 To use this editor configuration as a submodule in your parent project:
 ```bash
 # Add the submodule to your repository
-git submodule add https://github.com/bulga138/editor-config.git .editorconfig
+git submodule add https://github.com/bulga138/editor-config.git .editor-config
 
 # Initialize and update the submodule
 git submodule init
 git submodule update
-
-# Create symbolic link to the editorconfig file
-ln -s .editorconfig-setup/.editorconfig .editorconfig
 ```
 
 Create the file `.editorconfig` in the main project:
@@ -24,7 +21,7 @@ root = true
 
 # Import all rules from the shared submodule
 [**]
-include = .editorconfig/.editorconfig
+include = .editor-config/.editorconfig
 ```
 
 To avoid repeating the submodules commands, configure git:
@@ -49,7 +46,7 @@ git pullall
 The parent project should include the following in its `.gitmodules` file:
 
 ```bash
-[submodule ".editorconfig"]
-    path = .editorconfig
+[submodule ".editor-config"]
+    path = .editor-config
     url = https://github.com/bulga138/editor-config.git
 ```
