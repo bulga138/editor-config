@@ -1,0 +1,133 @@
+# Top-level configuration
+root = true
+
+# Default settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Python files
+[*.py]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# JavaScript, TypeScript, and JSON files
+[*.{js,jsx,ts,tsx,json}]
+indent_style = space
+indent_size = 2
+max_line_length = 120
+
+# CSS, SCSS, Sass files
+[*.{css,scss,sass}]
+indent_style = space
+indent_size = 2
+max_line_length = 120
+
+# HTML files
+[*.html]
+indent_style = space
+indent_size = 2
+max_line_length = 150
+
+# XML files
+[*.xml]
+indent_style = space
+indent_size = 2
+max_line_length = 150
+
+# YAML files
+[*.yml]
+indent_style = space
+indent_size = 2
+
+[*.{yaml,yml}]
+trim_trailing_whitespace = false
+
+# Markdown files
+[*.md]
+indent_style = space
+indent_size = 2
+max_line_length = false
+trim_trailing_whitespace = false
+
+# Jenkinsfile (treated as Groovy)
+[Jenkinsfile]
+indent_style = space
+indent_size = 2
+max_line_length = 100
+
+# TypeScript Declaration files
+[*.d.ts]
+indent_style = space
+indent_size = 2
+
+# Package.json specifically
+[package.json]
+indent_style = space
+indent_size = 2
+
+# Configuration files
+[*.{toml,ini}]
+indent_style = space
+indent_size = 2
+
+# Shell scripts
+[*.sh]
+indent_style = space
+indent_size = 2
+
+# Docker files
+[Dockerfile]
+indent_style = space
+indent_size = 2
+
+# C/C++ files
+[*.{c,cpp,h,hpp}]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# C# files
+[*.cs]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# Java files
+[*.java]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# Ruby files
+[*.rb]
+indent_style = space
+indent_size = 2
+max_line_length = 120
+
+# PHP files
+[*.php]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# Go files
+[*.go]
+indent_style = tab
+indent_size = 8
+max_line_length = 120
+
+# Rust files
+[*.rs]
+indent_style = space
+indent_size = 4
+max_line_length = 100
+
+# SQL files
+[*.sql]
+indent_style = space
+indent_size = 4
+max_line_length = 120
