@@ -5,6 +5,7 @@ This repository uses `.editorconfig` to maintain consistent coding styles and se
 ## Setup as Git submodule
 
 To use this editor configuration as a submodule in your parent project:
+
 ```bash
 # Add the submodule to your repository
 git submodule add https://github.com/bulga138/editor-config.git .editor-config
@@ -15,6 +16,7 @@ git submodule update
 ```
 
 Create the file `.editorconfig` in the main project:
+
 ```bash
 # This is the .editorconfig file in your MAIN PROJECT repo root
 root = true
@@ -25,6 +27,7 @@ include = .editor-config/.editorconfig
 ```
 
 To avoid repeating the submodules commands, configure git:
+
 ```bash
 # Configure Git to automatically recurse into submodules on clone and pull
 git config --global submodule.recurse true
