@@ -12,8 +12,8 @@ max_line_length = 120
 trim_trailing_whitespace = true
 
 # Files that use 4-space indentation
-# Python, C/C++, C#, Java, PHP, SQL
-[*.{py,c,cpp,h,hpp,cs,java,php,sql}]
+# Python, C/C++, C#, Java, PHP, SQL, JavaScript, TypeScript
+[*.{py,c,cpp,h,hpp,cs,java,php,sql,js,jsx,ts,tsx}]
 indent_size = 4
 
 # Files with longer line length
