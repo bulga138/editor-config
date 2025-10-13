@@ -15,15 +15,30 @@ git submodule init
 git submodule update
 ```
 
-Create the file `.editorconfig` in the main project:
+Create the file `.editorconfig` in the main project
 
 ```bash
-# This is the .editorconfig file in your MAIN PROJECT repo root
-root = true
+# MacOS, Linux
+touch .editorconfig
 
-# Import all rules from the shared submodule
-[**]
-include = .editor-config/.editorconfig
+# Windows command prompt
+type nul > .editorconfig
+
+# Windows Powershell
+New-Item -ItemType File -Path ".editorconfig"
+```
+
+Create symbolic link to the editorconfig file:
+
+```bash
+# MacOS, Linux
+ln -sf .editor-config/.editorconfig .editorconfig
+
+# Windows command prompt
+mklink .editorconfig .editor-config/.editorconfig.
+
+# Windows Powershell
+New-Item -ItemType SymbolicLink -Path ".editorconfig" -Target ".editor-config/.editorconfig"
 ```
 
 To avoid repeating the submodules commands, configure git:
@@ -40,6 +55,7 @@ git config --global alias.pullall '!git pull && git submodule update --init --re
 
 # To pull latest version of the submodule
 git pull --recurse-submodules
+
 # or the created alias
 git pullall
 ```
