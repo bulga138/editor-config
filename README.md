@@ -8,7 +8,7 @@ To use this editor configuration as a submodule in your parent project:
 
 ```bash
 # Add the submodule to your repository
-git submodule add https://github.com/bulga138/editor-config.git .editor-config
+git submodule add https://github.com/bulga138/editor-config.git .config/editorconfig
 
 # Initialize and update the submodule
 git submodule init
@@ -32,13 +32,13 @@ Create symbolic link to the editorconfig file:
 
 ```bash
 # MacOS, Linux
-ln -sf .editor-config/.editorconfig .editorconfig
+ln -sf .config/editorconfig/.editorconfig .editorconfig
 
 # Windows command prompt
-mklink .editorconfig .editor-config/.editorconfig.
+mklink .editorconfig .config/editorconfig/.editorconfig.
 
 # Windows Powershell
-New-Item -ItemType SymbolicLink -Path ".editorconfig" -Target ".editor-config/.editorconfig"
+New-Item -ItemType SymbolicLink -Path ".editorconfig" -Target ".config/editorconfig/.editorconfig"
 ```
 
 To avoid repeating the submodules commands, configure git:
@@ -66,6 +66,6 @@ The parent project should include the following in its `.gitmodules` file:
 
 ```bash
 [submodule ".editor-config"]
-    path = .editor-config
+    path = .config/editorconfig
     url = https://github.com/bulga138/editor-config.git
 ```
